@@ -1,0 +1,118 @@
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+// Cursor Classes
+.clickable {
+  cursor: pointer !important;
+}
+
+.is-loading,
+.is-loading * {
+  cursor: wait !important;
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
+
+// Text Classes
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Margin Classes
+.no-margin {
+  margin: 0 !important;
+}
+
+// Top
+.half-margin-top {
+  margin-top: 0.5rem;
+}
+
+.full-margin-top {
+  margin-top: 1rem;
+}
+
+// Bottom
+.half-margin-bottom {
+  margin-bottom: 0.5rem;
+}
+
+.full-margin-bottom {
+  margin-bottom: 1rem;
+}
+
+// Left
+.half-margin-left {
+  margin-left: 0.5rem;
+}
+
+.full-margin-left {
+  margin-left: 1rem;
+}
+
+// Right
+.half-margin-right {
+  margin-right: 0.5rem;
+}
+
+.full-margin-right {
+  margin-right: 1rem;
+}
+
+// Padding Classes
+.no-padding {
+  padding: 0 !important;
+}
+
+// Top
+.full-padding-top {
+  padding-top: 1rem;
+}
+
+.half-padding-top {
+  padding-top: 0.5rem;
+}
+
+// Bottom
+.full-padding-bottom {
+  padding-bottom: 1rem;
+}
+
+.half-padding-bottom {
+  padding-bottom: 0.5rem;
+}
+
+// Left
+.full-padding-left {
+  padding-left: 1rem;
+}
+
+.half-padding-left {
+  padding-left: 0.5rem;
+}
+
+// Right
+.full-padding-right {
+  padding-right: 1rem;
+}
+
+.half-padding-right {
+  padding-right: 0.5rem;
+}
