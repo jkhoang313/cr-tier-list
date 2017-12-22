@@ -12,7 +12,7 @@ export const callApi = (
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      "Auth-Token": sessionStorage.getItem("jwt")
+      "Auth-Token": sessionStorage.getItem("authToken")
     }
   };
   const finalRequestInfo = {
@@ -31,6 +31,7 @@ export const callApi = (
       .then(response => {
         switch (response.status) {
           case 404:
+            // should push to not-found
             dispatch(createReduxResponse(actionType.FAILURE));
             break;
           default:

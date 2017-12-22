@@ -1,83 +1,89 @@
-body .form-group .required-symbol {
-  display: none; }
-
-body .right {
-  float: right; }
-
-body .left {
-  float: left; }
-
-body .text-right {
-  text-align: right !important; }
-
-body .text-left {
-  text-align: left !important; }
-
-body .clickable {
-  cursor: pointer !important; }
-
-body .is-loading,
-body .is-loading * {
-  cursor: wait !important; }
-
-body .not-allowed {
-  cursor: not-allowed !important; }
-
-body .ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
-body .no-margin {
-  margin: 0 !important; }
-
-body .half-margin-top {
-  margin-top: 0.5rem; }
-
-body .full-margin-top {
-  margin-top: 1rem; }
-
-body .half-margin-bottom {
-  margin-bottom: 0.5rem; }
-
-body .full-margin-bottom {
-  margin-bottom: 1rem; }
-
-body .half-margin-left {
-  margin-left: 0.5rem; }
-
-body .full-margin-left {
-  margin-left: 1rem; }
-
-body .half-margin-right {
-  margin-right: 0.5rem; }
-
-body .full-margin-right {
-  margin-right: 1rem; }
-
-body .no-padding {
-  padding: 0 !important; }
-
-body .full-padding-top {
-  padding-top: 1rem; }
-
-body .half-padding-top {
-  padding-top: 0.5rem; }
-
-body .full-padding-bottom {
-  padding-bottom: 1rem; }
-
-body .half-padding-bottom {
-  padding-bottom: 0.5rem; }
-
-body .full-padding-left {
-  padding-left: 1rem; }
-
-body .half-padding-left {
-  padding-left: 0.5rem; }
-
-body .full-padding-right {
-  padding-right: 1rem; }
-
-body .half-padding-right {
-  padding-right: 0.5rem; }
+body {
+  font-family: Roboto, sans-serif; }
+  body .auth-modal-container {
+    padding-top: 0rem !important; }
+    body .auth-modal-container .close-icon {
+      cursor: pointer;
+      font-size: 3rem;
+      position: absolute;
+      right: 1rem;
+      top: 1rem; }
+    body .auth-modal-container .error-message {
+      color: red;
+      margin-top: 1rem; }
+    body .auth-modal-container .success-message {
+      color: green;
+      margin-top: 1rem; }
+    body .auth-modal-container .footer-buttons {
+      margin-bottom: -1rem;
+      padding-top: 1rem;
+      text-align: right; }
+      body .auth-modal-container .footer-buttons button div {
+        padding: 0 1rem; }
+  body .top-navbar span {
+    color: black !important;
+    cursor: pointer; }
+  body .top-navbar button {
+    margin-left: 0rem !important;
+    margin-right: 0rem !important; }
+    body .top-navbar button span {
+      font-size: 1.8rem !important; }
+  body .form-group .required-symbol {
+    display: none; }
+  body .form-group .glyphicon-remove {
+    display: none; }
+  body .right {
+    float: right; }
+  body .left {
+    float: left; }
+  body .text-right {
+    text-align: right !important; }
+  body .text-left {
+    text-align: left !important; }
+  body .clickable {
+    cursor: pointer !important; }
+  body .is-loading,
+  body .is-loading * {
+    cursor: wait !important; }
+  body .not-allowed {
+    cursor: not-allowed !important; }
+  body .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  body .no-margin {
+    margin: 0 !important; }
+  body .half-margin-top {
+    margin-top: 0.5rem; }
+  body .full-margin-top {
+    margin-top: 1rem; }
+  body .half-margin-bottom {
+    margin-bottom: 0.5rem; }
+  body .full-margin-bottom {
+    margin-bottom: 1rem; }
+  body .half-margin-left {
+    margin-left: 0.5rem; }
+  body .full-margin-left {
+    margin-left: 1rem; }
+  body .half-margin-right {
+    margin-right: 0.5rem; }
+  body .full-margin-right {
+    margin-right: 1rem; }
+  body .no-padding {
+    padding: 0 !important; }
+  body .full-padding-top {
+    padding-top: 1rem; }
+  body .half-padding-top {
+    padding-top: 0.5rem; }
+  body .full-padding-bottom {
+    padding-bottom: 1rem; }
+  body .half-padding-bottom {
+    padding-bottom: 0.5rem; }
+  body .full-padding-left {
+    padding-left: 1rem; }
+  body .half-padding-left {
+    padding-left: 0.5rem; }
+  body .full-padding-right {
+    padding-right: 1rem; }
+  body .half-padding-right {
+    padding-right: 0.5rem; }

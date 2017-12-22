@@ -1,0 +1,15 @@
+.top-navbar {
+  span {
+    color: $black !important;
+    cursor: pointer;
+  }
+
+  button {
+    margin-left: 0rem !important;
+    margin-right: 0rem !important;
+
+    span {
+      font-size: 1.8rem !important;
+    }
+  }
+}

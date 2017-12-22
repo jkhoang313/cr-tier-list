@@ -3,7 +3,6 @@
 * Learn how to use React here (https://reactjs.org/).
 * Delete the files/folders beginning with `.example`. These files/folders are meant to depict examples on how to use the app.
 * The `.example.dumb-component` and `.example.smart-component` files are there as a template for creating the respective component. You can delete these files or rename them and replace the `example` with `hidden` to make them non-git-tracked. You can keep the files and copy and paste them into newly created components/files.
-* This is a basic boilerplate, for a boilerplate including auth (Signup, Login, Reset Password, Change Password), checkout this branch (TBD).
 
 ## Setup
 

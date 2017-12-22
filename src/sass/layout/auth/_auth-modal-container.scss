@@ -1,0 +1,31 @@
+.auth-modal-container {
+  padding-top: 0rem !important;
+
+  .close-icon {
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .error-message {
+    color: $red;
+    margin-top: 1rem;
+  }
+
+  .success-message {
+    color: $green;
+    margin-top: 1rem;
+  }
+
+  .footer-buttons {
+    margin-bottom: -1rem;
+    padding-top: 1rem;
+    text-align: right;
+
+    button div {
+      padding: 0 1rem;
+    }
+  }
+}
