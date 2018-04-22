@@ -12,3 +12,11 @@ export const fetchTierListTypes = () => {
     requestInfo
   );
 };
+
+export const fetchTierLists = () => {
+  const requestInfo = {
+    method: "GET"
+  };
+
+  return callApi(`api/tier_lists`, constants.FETCH_TIER_LISTS, requestInfo);
+};

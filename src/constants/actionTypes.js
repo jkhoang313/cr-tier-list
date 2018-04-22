@@ -13,3 +13,4 @@ export const CLEAR_ERRORS = "CLEAR_ERRORS";
 export const FETCH_TIER_LIST_TYPES = createResponseTypes(
   "FETCH_TIER_LIST_TYPES"
 );
+export const FETCH_TIER_LISTS = createResponseTypes("FETCH_TIER_LISTS");

@@ -30,7 +30,9 @@ class App extends Component {
     }
   }
 
-  componentWillMount() {}
+  componentWillMount() {
+    this.props.fetchTierListTypes();
+  }
 
   openChangePWModal = () => {
     this.setState({
@@ -97,7 +99,7 @@ class App extends Component {
             openLoginModal={this.openLoginModal}
             openSignUpModal={this.openSignUpModal}
           />
-          <h2>Create your new app here!</h2>
+          {this.props.children}
         </div>
       </MuiThemeProvider>
     );
