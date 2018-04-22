@@ -1,12 +1,12 @@
 import { callApi } from "../middleware";
 import * as constants from "../../constants";
 
-export const getUser = () => {
+export const fetchUser = () => {
   const requestInfo = {
     method: "GET"
   };
 
-  return callApi(`api/get_user`, constants.GET_USER, requestInfo);
+  return callApi(`api/get_user`, constants.FETCH_USER, requestInfo);
 };
 
 export const login = params => {

@@ -19,17 +19,17 @@ const initialState = fromJS({
   }
 });
 
-const handleGetUserRequest = state => {
+const handlefetchUserRequest = state => {
   return state.set("currentUser", fromJS({})).set("isFetchingUser", true);
 };
 
-const handleGetUserFailure = state => {
+const handlefetchUserFailure = state => {
   sessionStorage.removeItem(constants.SESSION_AUTH_KEY);
 
   return state.set("currentUser", fromJS({})).set("isFetchingUser", false);
 };
 
-const handleGetUserSuccess = (state, action) => {
+const handlefetchUserSuccess = (state, action) => {
   return state
     .set("currentUser", fromJS(action.payload))
     .set("isFetchingUser", false);
@@ -154,9 +154,9 @@ const handleClearErrors = state => {
 };
 
 const actionHandler = {
-  [constants.GET_USER.REQUEST]: handleGetUserRequest,
-  [constants.GET_USER.FAILURE]: handleGetUserFailure,
-  [constants.GET_USER.SUCCESS]: handleGetUserSuccess,
+  [constants.FETCH_USER.REQUEST]: handlefetchUserRequest,
+  [constants.FETCH_USER.FAILURE]: handlefetchUserFailure,
+  [constants.FETCH_USER.SUCCESS]: handlefetchUserSuccess,
   [constants.LOGIN.REQUEST]: handleLoginRequest,
   [constants.LOGIN.FAILURE]: handleLoginFailure,
   [constants.LOGIN.SUCCESS]: handleLoginSuccess,

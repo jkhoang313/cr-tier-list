@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
-import { getUser } from "./redux/actions";
+import { fetchUser, fetchTierListTypes } from "./redux/actions";
 import NavBar from "./components/navbar/NavBar";
 import LoginModal from "./components/auth/LoginModal";
 import SignUpModal from "./components/auth/SignUpModal";
@@ -24,11 +24,13 @@ class App extends Component {
     this.setState(this.initialState);
   };
 
-  componentDidMount = () => {
+  componentDidMount() {
     if (sessionStorage.authToken) {
-      this.props.getUser();
+      this.props.fetchUser();
     }
-  };
+  }
+
+  componentWillMount() {}
 
   openChangePWModal = () => {
     this.setState({
@@ -105,7 +107,8 @@ class App extends Component {
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      getUser
+      fetchTierListTypes,
+      fetchUser
     },
     dispatch
   );
