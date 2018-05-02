@@ -13,10 +13,14 @@ export const fetchTierListTypes = () => {
   );
 };
 
-export const fetchTierLists = () => {
+export const fetchTierLists = listTypeId => {
   const requestInfo = {
     method: "GET"
   };
 
-  return callApi(`api/tier_lists`, constants.FETCH_TIER_LISTS, requestInfo);
+  return callApi(
+    `api/tier_lists/${listTypeId}`,
+    constants.FETCH_TIER_LISTS,
+    requestInfo
+  );
 };
