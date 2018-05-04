@@ -9,7 +9,9 @@ class TLListContainer extends Component {
   componentDidMount() {
     const { fetchTierLists, match } = this.props;
 
-    fetchTierLists(match.params.listTypeId);
+    fetchTierLists({
+      list_type_id: match.params.listTypeId
+    });
   }
 
   render() {

@@ -1,4 +1,4 @@
-import { callApi } from "../middleware";
+import { callApi, toQueryString } from "../middleware";
 import * as constants from "../../constants";
 
 export const fetchTierListTypes = () => {
@@ -13,13 +13,15 @@ export const fetchTierListTypes = () => {
   );
 };
 
-export const fetchTierLists = listTypeId => {
+export const fetchTierLists = params => {
   const requestInfo = {
     method: "GET"
   };
 
+  const queryString = toQueryString(params);
+
   return callApi(
-    `api/tier_lists/${listTypeId}`,
+    `api/tier_lists${queryString}`,
     constants.FETCH_TIER_LISTS,
     requestInfo
   );

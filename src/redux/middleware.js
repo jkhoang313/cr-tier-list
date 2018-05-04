@@ -56,6 +56,14 @@ export const callApi = (
   };
 };
 
+export const toQueryString = queryParams => {
+  return Object.keys(queryParams).reduce(
+    (currentQuery, queryKey) =>
+      currentQuery + `${queryKey}=${queryParams[queryKey]}`,
+    "?"
+  );
+};
+
 export const createResponseTypes = actionType => ({
   BASE: actionType,
   REQUEST: `${actionType}_REQUEST`,
