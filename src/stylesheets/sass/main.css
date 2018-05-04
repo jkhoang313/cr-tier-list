@@ -29,10 +29,10 @@ body {
     body .top-navbar button span {
       font-size: 1.8rem !important; }
   body .tl-list-item_container {
-    border: 1px solid #B5C2B7;
-    margin-bottom: 1rem; }
+    border: 1px solid #b5c2b7;
+    margin-bottom: 2rem; }
     body .tl-list-item_container .tl-list-item_header {
-      background-color: #E699AF;
+      background-color: #e699af;
       color: white; }
   body .form-group .required-symbol {
     display: none; }

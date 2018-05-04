@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { Row, Col } from "react-bootstrap";
 
 import { fetchTierLists } from "../../../redux/actions";
 import LoadingCircle from "../../generic/LoadingCircle";
@@ -26,12 +27,14 @@ class TLListContainer extends Component {
       return <LoadingCircle />;
     }
     return (
-      <div>
-        Tier Lists View
-        {tierLists.map((tierList, i) => (
-          <TLListItem key={i} tierList={tierList} />
-        ))}
-      </div>
+      <Row className="tl-list-container_container">
+        <Col sm={10} smOffset={1}>
+          Tier Lists View
+          {tierLists.map((tierList, i) => (
+            <TLListItem key={i} tierList={tierList} />
+          ))}
+        </Col>
+      </Row>
     );
   }
 }
