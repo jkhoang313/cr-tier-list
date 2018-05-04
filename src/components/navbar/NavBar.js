@@ -21,7 +21,7 @@ class NavBar extends Component {
     return (
       <Toolbar className="top-navbar">
         <ToolbarGroup>
-          <ToolbarTitle style={{ color: "black" }} text="React-Boilerplate" />
+          <ToolbarTitle style={{ color: "black" }} text="Clash Tier Lists" />
         </ToolbarGroup>
         <ToolbarGroup>
           {loggedIn ? (
