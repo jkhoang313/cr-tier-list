@@ -1,0 +1,17 @@
+.tl-list-item_header {
+  background-color: $light-red;
+  color: white;
+
+  .tl-list-item_header__title {
+    span:hover {
+      color: blue;
+      cursor: pointer;
+    }
+
+    font-size: 1.7rem;
+  }
+
+  .tl-list-item_header__creator {
+    color: black;
+  }
+}

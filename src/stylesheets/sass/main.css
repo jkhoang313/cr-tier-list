@@ -29,11 +29,18 @@ body {
     body .top-navbar button span {
       font-size: 1.8rem !important; }
   body .tl-list-item_container {
-    border: 1px solid #b5c2b7;
+    border: 1px solid #8C93A8;
     margin-bottom: 2rem; }
-    body .tl-list-item_container .tl-list-item_header {
-      background-color: #e699af;
-      color: white; }
+  body .tl-list-item_header {
+    background-color: #e699af;
+    color: white; }
+    body .tl-list-item_header .tl-list-item_header__title {
+      font-size: 1.7rem; }
+      body .tl-list-item_header .tl-list-item_header__title span:hover {
+        color: blue;
+        cursor: pointer; }
+    body .tl-list-item_header .tl-list-item_header__creator {
+      color: black; }
   body .form-group .required-symbol {
     display: none; }
   body .form-group .glyphicon-remove {
