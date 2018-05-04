@@ -28,6 +28,12 @@ body {
     margin-right: 0rem !important; }
     body .top-navbar button span {
       font-size: 1.8rem !important; }
+  body .tl-list-item_container {
+    border: 1px solid #B5C2B7;
+    margin-bottom: 1rem; }
+    body .tl-list-item_container .tl-list-item_header {
+      background-color: #E699AF;
+      color: white; }
   body .form-group .required-symbol {
     display: none; }
   body .form-group .glyphicon-remove {

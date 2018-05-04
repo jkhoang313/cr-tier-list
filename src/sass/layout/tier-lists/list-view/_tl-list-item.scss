@@ -1,0 +1,9 @@
+.tl-list-item_container {
+  border: 1px solid $gray;
+  margin-bottom: 1rem;
+
+  .tl-list-item_header {
+    background-color: $light-red;
+    color: $white;
+  }
+}
