@@ -7,10 +7,16 @@ import LoadingCircle from "../../generic/LoadingCircle";
 import TLListItem from "./TLListItem";
 
 class TLListContainer extends Component {
+  state = {
+    limit: 10,
+    offset: 0
+  };
+
   componentDidMount() {
     const { fetchTierLists } = this.props;
+    const { limit, offset } = this.state;
 
-    fetchTierLists();
+    fetchTierLists({ limit, offset });
   }
 
   render() {
