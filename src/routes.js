@@ -6,6 +6,6 @@ import TLListContainer from "./components/tier-lists/list-view/TLListContainer";
 
 export default (
   <App>
-    <Route path="/tier-lists/:listTypeId" component={TLListContainer} />
+    <Route path="/tier-lists" component={TLListContainer} />
   </App>
 );
