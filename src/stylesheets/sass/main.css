@@ -40,10 +40,12 @@ body {
     body .tl-list-item_header .tl-list-item_header__title {
       font-size: 1.7rem; }
       body .tl-list-item_header .tl-list-item_header__title .title-name {
+        color: white;
         margin-right: 0.5rem; }
         body .tl-list-item_header .tl-list-item_header__title .title-name:hover {
-          color: blue;
-          cursor: pointer; }
+          color: #337ab7;
+          cursor: pointer;
+          text-decoration: none; }
     body .tl-list-item_header .tl-list-item_header__creator {
       color: black; }
   body .form-group .required-symbol {

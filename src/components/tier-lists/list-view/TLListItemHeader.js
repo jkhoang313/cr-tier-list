@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import Tooltip from "../../generic/Tooltip";
 
@@ -9,7 +10,9 @@ export default class TLListItemHeader extends Component {
     return (
       <div className="tl-list-item_header">
         <div className="tl-list-item_header__title">
-          <span className="title-name">{title}</span>
+          <Link className="title-name" to={`/tier-list/${tierId}`}>
+            {title}
+          </Link>
           <Tooltip
             tooltipId={`tier-${tierId}-desc`}
             tooltipText={description}

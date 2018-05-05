@@ -6,11 +6,13 @@
     font-size: 1.7rem;
 
     .title-name {
+      color: white;
       margin-right: 0.5rem;
 
       &:hover {
-        color: blue;
+        color: $teal;
         cursor: pointer;
+        text-decoration: none;
       }
     }
   }
