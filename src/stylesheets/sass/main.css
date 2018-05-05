@@ -20,6 +20,9 @@ body {
       text-align: right; }
       body .auth-modal-container .footer-buttons button div {
         padding: 0 1rem; }
+  body .tooltip-container .tooltip-trigger {
+    color: #565764;
+    cursor: help; }
   body .top-navbar span {
     color: black !important;
     cursor: pointer; }
@@ -29,16 +32,18 @@ body {
     body .top-navbar button span {
       font-size: 1.8rem !important; }
   body .tl-list-item_container {
-    border: 1px solid #8C93A8;
+    border: 1px solid #8c93a8;
     margin-bottom: 2rem; }
   body .tl-list-item_header {
     background-color: #e699af;
     color: white; }
     body .tl-list-item_header .tl-list-item_header__title {
       font-size: 1.7rem; }
-      body .tl-list-item_header .tl-list-item_header__title span:hover {
-        color: blue;
-        cursor: pointer; }
+      body .tl-list-item_header .tl-list-item_header__title .title-name {
+        margin-right: 0.5rem; }
+        body .tl-list-item_header .tl-list-item_header__title .title-name:hover {
+          color: blue;
+          cursor: pointer; }
     body .tl-list-item_header .tl-list-item_header__creator {
       color: black; }
   body .form-group .required-symbol {

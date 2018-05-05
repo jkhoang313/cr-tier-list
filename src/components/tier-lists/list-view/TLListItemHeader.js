@@ -1,13 +1,19 @@
 import React, { Component } from "react";
 
+import Tooltip from "../../generic/Tooltip";
+
 export default class TLListItemHeader extends Component {
   render() {
-    const { title, user } = this.props;
+    const { description, tierId, title, user } = this.props;
 
     return (
       <div className="tl-list-item_header">
         <div className="tl-list-item_header__title">
-          <span>{title}</span>
+          <span className="title-name">{title}</span>
+          <Tooltip
+            tooltipId={`tier-${tierId}-desc`}
+            tooltipText={description}
+          />
         </div>
         <div className="tl-list-item_header__creator">
           {user.get("username")}

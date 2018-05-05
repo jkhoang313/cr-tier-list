@@ -3,12 +3,16 @@
   color: white;
 
   .tl-list-item_header__title {
-    span:hover {
-      color: blue;
-      cursor: pointer;
-    }
-
     font-size: 1.7rem;
+
+    .title-name {
+      margin-right: 0.5rem;
+
+      &:hover {
+        color: blue;
+        cursor: pointer;
+      }
+    }
   }
 
   .tl-list-item_header__creator {

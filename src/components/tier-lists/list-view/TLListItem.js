@@ -9,6 +9,8 @@ export default class TLListItem extends Component {
     return (
       <div className="tl-list-item_container">
         <TLListItemHeader
+          description={tierList.get("description")}
+          tierId={tierList.get("id")}
           title={tierList.get("title")}
           user={tierList.get("user")}
         />
