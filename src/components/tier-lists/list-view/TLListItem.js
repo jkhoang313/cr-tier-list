@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import TLListItemHeader from "./TLListItemHeader";
+import TLListItemBody from "./TLListItemBody";
 
 export default class TLListItem extends Component {
   render() {
@@ -14,7 +15,7 @@ export default class TLListItem extends Component {
           title={tierList.get("title")}
           user={tierList.get("user")}
         />
-        <div className="tl-list-item_body">tier list body</div>
+        <TLListItemBody tiers={tierList.get("tiers")} />
       </div>
     );
   }

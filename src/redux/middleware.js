@@ -57,11 +57,10 @@ export const callApi = (
 };
 
 export const toQueryString = (queryParams = {}) => {
-  return Object.keys(queryParams).reduce(
-    (currentQuery, queryKey) =>
-      currentQuery + `${queryKey}=${queryParams[queryKey]}&`,
-    "?"
+  const paramsArray = Object.keys(queryParams).map(
+    queryKey => `${queryKey}=${queryParams[queryKey]}`
   );
+  return `?${paramsArray.join("&")}`;
 };
 
 export const createResponseTypes = actionType => ({
