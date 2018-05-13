@@ -9,8 +9,11 @@ export const UPDATE_USER = createResponseTypes("UPDATE_USER");
 export const LOGOUT = "LOGOUT";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 
-// Tier List Types
+// Tier Lists
 export const FETCH_TIER_LIST_TYPES = createResponseTypes(
   "FETCH_TIER_LIST_TYPES"
 );
 export const FETCH_TIER_LISTS = createResponseTypes("FETCH_TIER_LISTS");
+
+// Cards
+export const FETCH_CARDS = createResponseTypes("FETCH_CARDS");

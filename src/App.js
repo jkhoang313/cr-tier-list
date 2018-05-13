@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
-import { fetchUser, fetchTierListTypes } from "./redux/actions";
+import { fetchCards, fetchTierListTypes, fetchUser } from "./redux/actions";
 import NavBar from "./components/navbar/NavBar";
 import LoginModal from "./components/auth/LoginModal";
 import SignUpModal from "./components/auth/SignUpModal";
@@ -31,6 +31,7 @@ class App extends Component {
   }
 
   componentWillMount() {
+    this.props.fetchCards();
     this.props.fetchTierListTypes();
   }
 
@@ -109,6 +110,7 @@ class App extends Component {
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
+      fetchCards,
       fetchTierListTypes,
       fetchUser
     },
