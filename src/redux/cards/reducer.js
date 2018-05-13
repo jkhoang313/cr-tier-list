@@ -4,7 +4,7 @@ import * as constants from "../../constants";
 
 const initialState = fromJS({
   isFetchingCards: false,
-  cards: []
+  cardsLibrary: []
 });
 
 const handleFetchCardsRequest = state => {
@@ -18,7 +18,7 @@ const handleFetchCardsFailure = state => {
 const handleFetchCardsSuccess = (state, action) => {
   return state
     .set("isFetchingCards", false)
-    .set("cards", fromJS(action.payload));
+    .set("cardsLibrary", fromJS(action.payload));
 };
 
 const actionHandler = {

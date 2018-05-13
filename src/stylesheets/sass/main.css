@@ -31,6 +31,9 @@ body {
     margin-right: 0rem !important; }
     body .top-navbar button span {
       font-size: 1.8rem !important; }
+  body .card-item-container img.card-image {
+    height: 4.5rem;
+    width: 4rem; }
   body .tl-list-item_container {
     border: 1px solid #8c93a8;
     margin-bottom: 2rem; }

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import CardItem from "./CardItem";
+
 export default class TierRow extends Component {
   render() {
     const { tier } = this.props;
@@ -10,7 +12,7 @@ export default class TierRow extends Component {
         <div>
           {tier
             .get("cards")
-            .map((cardId, i) => <span key={i}>{cardId + " "}</span>)}
+            .map((cardId, i) => <CardItem cardId={cardId} key={i} />)}
         </div>
       </div>
     );
