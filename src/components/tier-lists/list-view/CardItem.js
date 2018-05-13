@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 
 import { nameToImage } from "../../../helpers";
+import Tooltip from "../../generic/Tooltip";
 
 class CardItem extends PureComponent {
   render() {
@@ -14,13 +15,18 @@ class CardItem extends PureComponent {
 
     return (
       <span className="card-item-container">
-        <img
-          alt={selectedCard.get("name")}
-          className="card-image"
-          src={`../../../../cardImages/${nameToImage(
-            selectedCard.get("name")
-          )}.png`}
-        />
+        <Tooltip
+          tooltipId={`card-${selectedCard.get("name")}`}
+          tooltipText={selectedCard.get("name")}
+        >
+          <img
+            alt={selectedCard.get("name")}
+            className="card-image"
+            src={`../../../../cardImages/${nameToImage(
+              selectedCard.get("name")
+            )}.png`}
+          />
+        </Tooltip>
       </span>
     );
   }
