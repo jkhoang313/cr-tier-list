@@ -60,12 +60,14 @@ class TLListContainer extends Component {
               <TLListItem key={i} tierList={tierList} />
             ))
           )}
-          <GenericPagination
-            changePage={this.changePage}
-            currentPage={currentPage}
-            listsPerPage={LISTS_PER_PAGE}
-            totalTierLists={totalTierLists}
-          />
+          {isFetchingTierLists ? null : (
+            <GenericPagination
+              changePage={this.changePage}
+              currentPage={currentPage}
+              listsPerPage={LISTS_PER_PAGE}
+              totalTierLists={totalTierLists}
+            />
+          )}
         </Col>
       </Row>
     );
