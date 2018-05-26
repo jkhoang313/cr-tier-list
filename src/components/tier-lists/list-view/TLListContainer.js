@@ -5,34 +5,67 @@ import { Row, Col } from "react-bootstrap";
 
 import { fetchTierLists } from "../../../redux/actions";
 import LoadingCircle from "../../generic/LoadingCircle";
+import GenericPagination from "./GenericPagination";
 import TLListItem from "./TLListItem";
+
+const LISTS_PER_PAGE = 10;
 
 class TLListContainer extends Component {
   state = {
-    limit: 10,
-    offset: 0
+    currentPage: 1
+  };
+
+  changePage = newPage => {
+    const { fetchTierLists } = this.props;
+    const offset = newPage - 1;
+
+    this.setState({
+      currentPage: newPage
+    });
+    fetchTierLists({
+      limit: LISTS_PER_PAGE,
+      offset: offset * LISTS_PER_PAGE
+    });
   };
 
   componentDidMount() {
     const { fetchTierLists } = this.props;
-    const { limit, offset } = this.state;
+    const { currentPage } = this.state;
+    const offset = currentPage - 1;
 
-    fetchTierLists({ limit, offset });
+    fetchTierLists({
+      limit: LISTS_PER_PAGE,
+      offset: offset * LISTS_PER_PAGE
+    });
   }
 
   render() {
-    const { isFetchingTierLists, tierLists } = this.props;
+    const { isFetchingTierLists, tierLists, totalTierLists } = this.props;
+    const { currentPage } = this.state;
 
-    if (isFetchingTierLists) {
-      return <LoadingCircle />;
-    }
     return (
       <Row className="tl-list-container_container">
         <Col sm={10} smOffset={1}>
-          Tier Lists View
-          {tierLists.map((tierList, i) => (
-            <TLListItem key={i} tierList={tierList} />
-          ))}
+          <div>Tier Lists View</div>
+          <GenericPagination
+            changePage={this.changePage}
+            currentPage={currentPage}
+            listsPerPage={LISTS_PER_PAGE}
+            totalTierLists={totalTierLists}
+          />
+          {isFetchingTierLists ? (
+            <LoadingCircle />
+          ) : (
+            tierLists.map((tierList, i) => (
+              <TLListItem key={i} tierList={tierList} />
+            ))
+          )}
+          <GenericPagination
+            changePage={this.changePage}
+            currentPage={currentPage}
+            listsPerPage={LISTS_PER_PAGE}
+            totalTierLists={totalTierLists}
+          />
         </Col>
       </Row>
     );
@@ -41,7 +74,8 @@ class TLListContainer extends Component {
 
 const mapStateToProps = state => ({
   isFetchingTierLists: state.tierLists.get("isFetchingTierLists"),
-  tierLists: state.tierLists.get("tierLists")
+  tierLists: state.tierLists.get("tierLists"),
+  totalTierLists: state.tierLists.get("totalTierLists")
 });
 
 const mapDispatchToProps = dispatch =>

@@ -5,7 +5,8 @@ import * as constants from "../../constants";
 const initialState = fromJS({
   filterTypes: [],
   isFetchingTierLists: false,
-  tierLists: []
+  tierLists: [],
+  totalTierLists: 0
 });
 
 const handleFetchTierListTypesSuccess = (state, action) => {
@@ -23,7 +24,8 @@ const handleFetchTierListsFailure = state => {
 const handleFetchTierListsSuccess = (state, action) => {
   return state
     .set("isFetchingTierLists", false)
-    .set("tierLists", fromJS(action.payload));
+    .set("tierLists", fromJS(action.payload.tier_lists))
+    .set("totalTierLists", fromJS(action.payload.total_tier_lists));
 };
 
 const actionHandler = {
