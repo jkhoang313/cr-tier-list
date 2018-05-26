@@ -6,12 +6,16 @@ export default class GenericPagination extends PureComponent {
     const {
       changePage,
       currentPage,
+      hidden = false,
       listsPerPage,
       totalTierLists
     } = this.props;
 
+    if (hidden) {
+      return null;
+    }
     return (
-      <div>
+      <div className="text-center">
         <Pagination
           activePage={currentPage}
           itemsCountPerPage={listsPerPage}

@@ -50,6 +50,7 @@ class TLListContainer extends Component {
           <GenericPagination
             changePage={this.changePage}
             currentPage={currentPage}
+            hidden={totalTierLists === 0}
             listsPerPage={LISTS_PER_PAGE}
             totalTierLists={totalTierLists}
           />
@@ -60,14 +61,13 @@ class TLListContainer extends Component {
               <TLListItem key={i} tierList={tierList} />
             ))
           )}
-          {isFetchingTierLists ? null : (
-            <GenericPagination
-              changePage={this.changePage}
-              currentPage={currentPage}
-              listsPerPage={LISTS_PER_PAGE}
-              totalTierLists={totalTierLists}
-            />
-          )}
+          <GenericPagination
+            changePage={this.changePage}
+            currentPage={currentPage}
+            hidden={totalTierLists === 0 || isFetchingTierLists}
+            listsPerPage={LISTS_PER_PAGE}
+            totalTierLists={totalTierLists}
+          />
         </Col>
       </Row>
     );
